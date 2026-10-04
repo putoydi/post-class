@@ -1,38 +1,29 @@
 # Demo video
 
-**File:** `demo.mp4` in this folder, or the hosted link (see below)
-**Length:** aim for 3 to 5 minutes
-**Recorded on:** the device you used
+**File:** `assets/demo.mp4`
+**Length:** 8 minutes and 15 seconds
+**Recorded on:** My personal computer using OBS Studio
 
 ## What it shows
 
 A short list, in order, so a viewer can skip to what they need:
 
-- 0:00 what the app is and who it is for
-- 0:20 ...
-- 1:10 ...
-
-Cover, in this order: the main user journey end to end, anything that only works
-on a real device (camera, GPS, sensors), and the thing you are proudest of.
-
-## Getting it into the repo
-
-GitHub **blocks any file over 100 MB** and warns over 50 MB, so compress before
-you commit:
-
-```bash
-ffmpeg -i raw.mp4 -vcodec libx264 -crf 28 -preset slow \
-       -vf scale=-2:720 -acodec aac -b:a 96k demo.mp4
-```
-
-Raise `-crf` (28 to 32) or drop to `-2:480` if it is still too large. If it still
-does not fit, attach it to a **GitHub Release** or upload it unlisted and link it
-here. Never commit the raw capture: git keeps it forever even after you delete
-it.
-
-## Before you record
-
-- Real data off the screen: no classmates' names, numbers, faces or messages.
-- Notifications off.
-- Sensible sample data, not "asdf".
-- One unbroken take per feature. Say what you are doing while you do it.
+- 0:00 Introduction
+- 0:38 Sign Up
+- 0:58 Login
+- 1:30 Postboard introduction
+- 1:56 Postboard in action
+- 2:39 Classes Screen
+- 2:49 Join/Create Class Introduction
+- 2:54 Profile
+- 3:13 Class Codes
+- 3:22 Classboard
+- 4:09 Creating a post
+- 4:31 Editing a post
+- 5:40 Replying to a post
+- 6:06 Editing a reply
+- 6:27 Realtime updates
+- 6:47 Creating a Class
+- 6:55 Class Code generated
+- 7:24 Joining a Class
+- 7:43 Closing Remarks
