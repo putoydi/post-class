@@ -45,16 +45,35 @@ class ClassCard extends StatelessWidget {
                 padding: const EdgeInsets.all(AppSpacing.md),
                 decoration: BoxDecoration(
                   color: headerColor,
-                  borderRadius: hasPostContent 
+                  borderRadius: hasPostContent
                       ? const BorderRadius.vertical(top: Radius.circular(11))
                       : BorderRadius.circular(11),
-                  border: hasPostContent 
-                      ? const Border(bottom: BorderSide(color: AppColors.textAndOutlines, width: 1))
+                  border: hasPostContent
+                      ? const Border(
+                          bottom: BorderSide(
+                            color: AppColors.textAndOutlines,
+                            width: 1,
+                          ),
+                        )
                       : null,
                 ),
-                child: Text(
-                  className,
-                  style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      className,
+                      style: textTheme.bodyMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: AppSpacing.xs),
+                    Text(
+                      'Code: $code',
+                      style: textTheme.labelSmall?.copyWith(
+                        color: AppColors.textAndOutlines,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               if (hasPostContent)
