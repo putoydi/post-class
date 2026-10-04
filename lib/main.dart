@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
 import 'theme/app_theme.dart';
 import 'screens/auth_screen.dart';
 import 'screens/postboard_screen.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,6 +25,9 @@ class MyApp extends StatelessWidget {
       title: 'Post-Class',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
+
+      // If Supabase still has an active session,
+      // go directly to Postboard.
       home: Supabase.instance.client.auth.currentSession == null
           ? const AuthScreen()
           : const PostboardScreen(),
