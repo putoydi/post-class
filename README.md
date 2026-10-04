@@ -1,6 +1,6 @@
-# post_class
+# This is Post-Class
 
-A new Flutter project.
+A platform for posts and communications between everyone in class, post-class.
 
 ## Getting Started
 
